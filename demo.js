@@ -1,6 +1,8 @@
 //this is a demo about some threejs function 
 //authored by gy
 
+import * as THREE from './three/build/three.module.js';
+import { OrbitControls } from './three/examples/jsm/controls/OrbitControls.js'
 
 //获得canvas来初始化渲染器
 var renderer = new THREE.WebGLRenderer({
@@ -42,7 +44,7 @@ camera = PersCamera;
 
 
 //创建一个控制器
-var controls = new THREE.OrbitControls(camera, renderer.domElement);
+var controls = new OrbitControls(camera, renderer.domElement);
 
 
 //创建一个正方体demo
@@ -50,7 +52,6 @@ var geometry = new THREE.BoxBufferGeometry(100, 100, 100);
 var material = new THREE.MeshBasicMaterial({
     color: 0x000000,
     wireframe: true,
-    de
  });
 var material1 = new THREE.MeshLambertMaterial({
     color: 0x00ff00,
